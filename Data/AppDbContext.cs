@@ -10,7 +10,6 @@ public class AppDbContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // One-to-many relationship between Project and Employee
         modelBuilder.Entity<Employee>()
             .HasOne(e => e.Project)
             .WithMany(p => p.Employees)

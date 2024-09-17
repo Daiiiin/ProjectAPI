@@ -20,7 +20,7 @@ public class EmployeeController : ControllerBase
         return await _context.Employees.Include(e => e.Project).ToListAsync();
     }
 
-    // GET: api/Employee/5
+    // GET: api/Employee/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<Employee>> GetEmployee(int id)
     {
@@ -43,7 +43,7 @@ public class EmployeeController : ControllerBase
         return CreatedAtAction(nameof(GetEmployee), new { id = employee.EmployeeId }, employee);
     }
 
-    // PUT: api/Employee/5
+    // PUT: api/Employee/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> PutEmployee(int id, Employee employee)
     {
@@ -57,7 +57,7 @@ public class EmployeeController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/Employee/5
+    // DELETE: api/Employee/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteEmployee(int id)
     {

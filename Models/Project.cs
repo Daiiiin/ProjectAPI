@@ -8,6 +8,5 @@ public class Project
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     
-    // Relationship: One Project can have multiple Employees assigned
     public ICollection<Employee>? Employees { get; set; }
 }

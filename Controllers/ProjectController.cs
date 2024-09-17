@@ -20,7 +20,7 @@ public class ProjectController : ControllerBase
         return await _context.Projects.Include(p => p.Employees).ToListAsync();
     }
 
-    // GET: api/Project/5
+    // GET: api/Project/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<Project>> GetProject(int id)
     {
@@ -46,7 +46,7 @@ public class ProjectController : ControllerBase
         return CreatedAtAction(nameof(GetProject), new { id = project.ProjectId }, project);
     }
 
-    // PUT: api/Project/5
+    // PUT: api/Project/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> PutProject(int id, Project project)
     {
@@ -60,7 +60,7 @@ public class ProjectController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/Project/5
+    // DELETE: api/Project/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProject(int id)
     {
