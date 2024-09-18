@@ -135,3 +135,4 @@
 /home/matt/projects/ProjectAPI/obj/Debug/net8.0/ProjectAPI.pdb
 /home/matt/projects/ProjectAPI/obj/Debug/net8.0/ProjectAPI.genruntimeconfig.cache
 /home/matt/projects/ProjectAPI/obj/Debug/net8.0/ref/ProjectAPI.dll
+/home/matt/projects/ProjectAPI/obj/Debug/net8.0/ProjectAPI.sourcelink.json
